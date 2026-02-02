@@ -139,6 +139,12 @@ export default function RootLayout({
     <html lang="ko">
       <head>
         <StructuredData />
+        {/* Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5547434174125750"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
         {/* Skip to main content - A11y */}
