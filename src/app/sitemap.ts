@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { POPULAR_SALARIES } from '@/lib/salaryTable';
+import { siteConfig } from '@/lib/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://example.com'; // Update with actual domain
+  const baseUrl = siteConfig.url;
 
   // Core pages
   const corePages: MetadataRoute.Sitemap = [
