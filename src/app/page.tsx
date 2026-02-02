@@ -27,10 +27,8 @@ export default function HomePage() {
       {/* Main Calculator */}
       <RaiseSimulator />
 
-      {/* Ad Slot Placeholder */}
-      <div className="mt-8 bg-gray-100 rounded-xl h-[250px] flex items-center justify-center text-gray-400 text-sm border-2 border-dashed border-gray-200">
-        광고 영역
-      </div>
+      {/* Ad Slot - AdSense 승인 후 활성화 */}
+      <div className="mt-8" id="ad-slot-home" aria-hidden="true" />
 
       {/* SEO Content */}
       <section className="mt-12 space-y-8">

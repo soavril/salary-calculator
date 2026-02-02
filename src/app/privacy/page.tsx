@@ -56,13 +56,66 @@ export default function PrivacyPage() {
         <p className="text-gray-600 mb-3">
           본 서비스는 다음 도구를 사용할 수 있습니다:
         </p>
-        <ul className="text-gray-600 space-y-1 ml-4">
-          <li>• Google Analytics - 서비스 이용 통계 분석</li>
-          <li>• Google AdSense - 맞춤형 광고 제공</li>
+        <ul className="text-gray-600 space-y-2 ml-4">
+          <li>• <strong>Google Analytics</strong> - 서비스 이용 통계 분석</li>
+          <li>• <strong>Google AdSense</strong> - 맞춤형 광고 제공</li>
         </ul>
-        <p className="text-gray-600 mt-3">
-          쿠키 사용을 원하지 않는 경우, 브라우저 설정에서 쿠키를 비활성화할 수
-          있습니다.
+
+        <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+          <h3 className="font-semibold text-gray-900 mb-2">Google AdSense 광고 및 쿠키</h3>
+          <p className="text-gray-600 text-sm mb-3">
+            본 서비스는 Google AdSense를 통해 광고를 게재합니다. Google은 쿠키를 사용하여
+            이용자의 관심사에 기반한 맞춤형 광고를 제공할 수 있습니다.
+          </p>
+          <ul className="text-gray-600 text-sm space-y-1 ml-4 mb-3">
+            <li>• Google은 DoubleClick 쿠키를 사용하여 광고를 게재합니다</li>
+            <li>• 이 쿠키는 이용자가 방문한 웹사이트 정보를 기반으로 관련 광고를 표시합니다</li>
+            <li>• Google은 이용자의 개인 식별 정보를 수집하지 않습니다</li>
+          </ul>
+          <p className="text-gray-600 text-sm mb-2">
+            <strong>맞춤 광고 비활성화:</strong> 아래 링크에서 Google 광고 설정을 관리하거나
+            맞춤 광고를 비활성화할 수 있습니다.
+          </p>
+          <ul className="text-sm space-y-1 ml-4">
+            <li>
+              •{' '}
+              <a
+                href="https://www.google.com/settings/ads"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Google 광고 설정
+              </a>
+            </li>
+            <li>
+              •{' '}
+              <a
+                href="https://policies.google.com/technologies/ads"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Google 광고 정책
+              </a>
+            </li>
+            <li>
+              •{' '}
+              <a
+                href="https://optout.networkadvertising.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                NAI 옵트아웃 페이지
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <p className="text-gray-600 mt-4">
+          쿠키 사용을 원하지 않는 경우, 브라우저 설정에서 쿠키를 비활성화하거나
+          위 링크를 통해 맞춤 광고를 비활성화할 수 있습니다.
         </p>
       </Card>
 

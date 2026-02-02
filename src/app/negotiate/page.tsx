@@ -23,10 +23,8 @@ export default function NegotiatePage() {
       {/* Calculator */}
       <NegotiationCalculator />
 
-      {/* Ad Slot Placeholder */}
-      <div className="mt-8 bg-gray-100 rounded-xl h-[250px] flex items-center justify-center text-gray-400 text-sm">
-        광고 영역
-      </div>
+      {/* Ad Slot - AdSense 승인 후 활성화 */}
+      <div className="mt-8" id="ad-slot-negotiate" aria-hidden="true" />
 
       {/* SEO Content */}
       <section className="mt-12 prose prose-gray max-w-none">

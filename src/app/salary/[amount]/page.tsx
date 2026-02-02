@@ -158,10 +158,8 @@ export default async function SalaryDetailPage({ params }: PageProps) {
         </div>
       </Card>
 
-      {/* Ad Slot */}
-      <div className="my-8 bg-gray-100 rounded-xl h-[250px] flex items-center justify-center text-gray-400 text-sm">
-        광고 영역
-      </div>
+      {/* Ad Slot - AdSense 승인 후 활성화 */}
+      <div className="my-8" id="ad-slot-salary" aria-hidden="true" />
 
       {/* CTA */}
       <div className="flex gap-4">
