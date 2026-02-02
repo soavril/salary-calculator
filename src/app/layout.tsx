@@ -139,6 +139,8 @@ export default function RootLayout({
     <html lang="ko">
       <head>
         <StructuredData />
+        {/* Naver Search Advisor */}
+        <meta name="naver-site-verification" content="a3606bfd201cdf515836e37aae840be7f1c82b79" />
         {/* Google AdSense */}
         <script
           async
