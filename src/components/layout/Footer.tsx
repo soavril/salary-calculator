@@ -99,6 +99,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/terms" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  이용약관
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                   문의하기
                 </Link>
