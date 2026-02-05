@@ -75,8 +75,23 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/salary/6000" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  6000만원
+                </Link>
+              </li>
+              <li>
                 <Link href="/salary/7000" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                   7000만원
+                </Link>
+              </li>
+              <li>
+                <Link href="/salary/8000" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  8000만원
+                </Link>
+              </li>
+              <li>
+                <Link href="/salary/10000" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  1억
                 </Link>
               </li>
             </ul>

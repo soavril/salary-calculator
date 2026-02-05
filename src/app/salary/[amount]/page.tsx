@@ -187,9 +187,57 @@ export default async function SalaryDetailPage({ params }: PageProps) {
           세전 월급 {formatKRW(data.monthlyGross)}원에서 4대보험과 소득세를 공제한
           금액으로, 실효세율은 {formatPercent(data.effectiveRate)}입니다.
         </p>
-        <p className="text-gray-600">
+        <p className="text-gray-600 mb-4">
           같은 연봉이라도 부양가족 수, 비과세 수당에 따라 실수령액이 달라질 수
           있습니다. 정확한 금액은 급여명세서를 확인하세요.
+        </p>
+
+        <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">
+          연봉 {salaryText} 공제 항목 상세
+        </h3>
+        <ul className="text-gray-600 space-y-2 list-disc pl-5">
+          <li>
+            <strong>국민연금</strong>: 월 {formatKRW(data.result.breakdown.nationalPension)}원 (기준소득월액의 4.5%)
+          </li>
+          <li>
+            <strong>건강보험</strong>: 월 {formatKRW(data.result.breakdown.healthInsurance)}원 (보수월액의 3.545%)
+          </li>
+          <li>
+            <strong>장기요양보험</strong>: 월 {formatKRW(data.result.breakdown.longTermCare)}원 (건강보험료의 12.95%)
+          </li>
+          <li>
+            <strong>고용보험</strong>: 월 {formatKRW(data.result.breakdown.employmentInsurance)}원 (보수의 0.9%)
+          </li>
+          <li>
+            <strong>소득세</strong>: 월 {formatKRW(data.result.breakdown.incomeTax)}원 (간이세액표 기준)
+          </li>
+          <li>
+            <strong>지방소득세</strong>: 월 {formatKRW(data.result.breakdown.localTax)}원 (소득세의 10%)
+          </li>
+        </ul>
+
+        <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">
+          연봉 {salaryText} 연간 요약
+        </h3>
+        <div className="bg-gray-50 rounded-lg p-4 text-gray-600">
+          <p className="mb-2">• 연간 세전 총액: {formatKRW(data.annualRaw)}원</p>
+          <p className="mb-2">• 연간 실수령액: {formatKRW(data.monthlyNet * 12)}원</p>
+          <p className="mb-2">• 연간 공제 총액: {formatKRW(data.totalDeduction * 12)}원</p>
+          <p>• 월평균 실수령: {formatKRW(data.monthlyNet)}원</p>
+        </div>
+
+        <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">
+          알아두면 좋은 정보
+        </h3>
+        <p className="text-gray-600 mb-2">
+          {salary < 3000 && '연봉 3천만원 미만은 소득세 부담이 상대적으로 적어, 실효세율이 10% 내외입니다.'}
+          {salary >= 3000 && salary < 5000 && '연봉 3천~5천만원 구간은 대한민국 직장인 평균 연봉대로, 실효세율 약 12~17%가 적용됩니다.'}
+          {salary >= 5000 && salary < 8000 && '연봉 5천~8천만원 구간은 과세표준 15~24% 세율 구간이 적용되어, 실수령 비율이 점차 낮아집니다.'}
+          {salary >= 8000 && salary < 12000 && '연봉 8천만원 이상은 상위 10% 소득자로, 24% 이상의 세율이 적용되어 공제액이 크게 증가합니다.'}
+          {salary >= 12000 && '연봉 1.2억 이상은 상위 5% 고소득자로, 35% 이상의 높은 세율이 적용됩니다. 절세 전략이 중요합니다.'}
+        </p>
+        <p className="text-gray-500 text-sm mt-4">
+          ※ 2026년 기준 계산이며, 비과세 수당, 부양가족 공제 등에 따라 실제 금액은 달라질 수 있습니다.
         </p>
       </section>
     </div>
